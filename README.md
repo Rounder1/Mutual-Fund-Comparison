@@ -1,14 +1,14 @@
 # Mutual Myth
 
-Make a burger, eat a burger. This app logs what kind of burger the latest most hipster new restaurant will cook up and track what burgers you have consumed.
+Side by side comparison of stock performance. The purpose of this app is so you can see if a passive fund will out perform an active fund. Compare and earn more with the mutual myth
 
 ## Getting Started
 
-You can check out the Heroku deployment of this app here [Burger App](https://rodolfo-burger.herokuapp.com/)
+You can check out the Heroku deployment of this app here [Mutual Myth](https://mutual-myth.herokuapp.com/)
 
 ### Prerequisites
 
-Make sure you have Node and selectAll the packages on the init file
+Make sure you have Node and install all the packages on the init file
 
 ### Installing
 
@@ -34,9 +34,11 @@ We use [GitHub](http://github.com/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Rodolfo Saez** - *Initial work* - [Rodolfo Saez](https://github.com/rsaez)
+* **David Toler** - *UI/UX* - [David Toler](https://github.com/rounder1)
+* **Rodolfo Saez** - *UI/UX* - [Rodolfo Saez](https://github.com/rsaez)
+* **Shazia Jiwani** - *UI/UX* - [Shazia Jiwani](https://github.com/jshazia)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/rsaez/MutualMyth/settings/collaboration) who participated in this project.
 
 ## License
 
