@@ -7,7 +7,7 @@ CREATE TABLE funds
 (
 	fund_id int NOT NULL AUTO_INCREMENT,
 	symbol varchar(10) NOT NULL,
-	expense_ratio DOUBLE ALLOW NULL,
+	expense_ratio DOUBLE,
 	PRIMARY KEY (fund_id)
 );
 
