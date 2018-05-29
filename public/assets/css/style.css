@@ -17,3 +17,9 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+/*CSS for the line chart*/
+.line-chart
+{
+  border: 1px solid lightgray;
+}
