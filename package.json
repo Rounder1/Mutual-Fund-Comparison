@@ -1,7 +1,7 @@
 {
   "name": "post-author-joins",
   "version": "1.0.0",
-  "description": "",
+  "description": "Side by side comparison of stock performance. The purpose of this app is so you can see if a passive fund will out perform an active fund. Compare and earn more with the mutual myth",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,17 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
     "mysql2": "^1.3.6",
     "sequelize": "^4.37.10"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsaez/MutualMyth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rsaez/MutualMyth/issues"
+  },
+  "homepage": "https://github.com/rsaez/MutualMyth#readme"
 }

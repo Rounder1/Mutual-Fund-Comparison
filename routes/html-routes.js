@@ -13,23 +13,27 @@ module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // index route loads view.html
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
-  });
+  app.get('/', function(req, res) {
+      // funds.selectAll(function(data) {
+          // var hbsObject = {
+          //     funds : data
+          // };
 
-  // cms route loads cms.html
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
-  });
+          // console.log("burgers_controller > get----------------------");
+          // console.log(req.query);
+          // // console.log(req.body);
+          // console.log("req end");
+          // console.log("****************************");
+          // console.log(res.burgers);
+          // console.log("end res");
+          // console.log();
 
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
-  });
 
-  // authors route loads author-manager.html
-  app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+      //     res.render("index");
+      // });
+
+      res.render("index");
+
   });
 
 };
