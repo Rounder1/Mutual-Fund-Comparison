@@ -9,6 +9,8 @@ var passport   = require('passport');
 var session    = require('express-session');
 var bodyParser = require("body-parser");
 var env = require('dotenv').load();
+// Set Handlebars
+var exphbs = require('express-handlebars');
 
 // Sets up the Express App
 // =============================================================
@@ -19,7 +21,6 @@ var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
 // Sets up the Express app to handle data parsing
-
 // init parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
 // parse application/json
@@ -34,9 +35,7 @@ app.use(passport.session()); // persistent login sessions
 // Static directory
 app.use(express.static("public"));
 
-// Set Handlebars.
-var exphbs = require("express-handlebars");
-
+// Initialize handlebars
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
@@ -44,6 +43,7 @@ app.set("view engine", "handlebars");
 // =============================================================
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+var authRoute = require('./routes/auth.js')(app);
 
 //Models
 var models = require("./models");
