@@ -43,10 +43,15 @@ app.set("view engine", "handlebars");
 // =============================================================
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
-var authRoute = require('./routes/auth.js')(app);
+// old code in example replace by line below
+//var authRoute = require('./routes/auth.js')(app);
+var authRoute = require('./routes/auth.js')(app,passport);
 
 //Models
 var models = require("./models");
+
+//load passport strategies
+require('./config/passport/passport.js')(passport, models.user);
 
 //Sync Database
 models.sequelize.sync().then(function() {
