@@ -8,6 +8,7 @@ var express = require("express");
 var passport   = require('passport');
 var session    = require('express-session');
 var bodyParser = require("body-parser");
+var env = require('dotenv').load();
 
 // Sets up the Express App
 // =============================================================
@@ -43,6 +44,20 @@ app.set("view engine", "handlebars");
 // =============================================================
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+
+//Models
+var models = require("./models");
+
+//Sync Database
+models.sequelize.sync().then(function() {
+
+    console.log('Nice! Database looks fine')
+
+}).catch(function(err) {
+
+    console.log(err, "Something went wrong with the Database Update!")
+
+});
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
