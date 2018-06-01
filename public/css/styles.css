@@ -1,25 +1,24 @@
 li {
-  padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
 }
 
 .label {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
 }
 
 .form-group {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 /*CSS for the line chart*/
-.line-chart
-{
-  border: 1px solid lightgray;
+.line-chart {
+    border: 1px solid lightgray;
 }
