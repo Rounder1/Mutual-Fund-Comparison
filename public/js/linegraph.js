@@ -16,12 +16,12 @@ var line = d3.line()
     .x(function(d) { return x(d.date); })
     .y(function(d) { return y(d.close); });
 
-d3.json(){
-    blah blah blah
-}
+// d3.json(){
+//     blah blah blah
+// }
 
 
-d3.tsv("data.tsv", function(d) {
+d3.tsv("./js/data.tsv", function(d) {
     d.date = parseTime(d.date);
     d.close = +d.close;
     return d;
