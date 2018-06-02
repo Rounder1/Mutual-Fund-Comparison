@@ -21,3 +21,16 @@ CREATE TABLE funds_history
 	FOREIGN KEY(fund_id) REFERENCES funds(fund_id)
 
 );
+CREATE TABLE User
+(
+    id int NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR(250) NOT NULL,
+    lastname VARCHAR(250) NOT NULL,
+    username VARCHAR(250),
+    about VARCHAR(250),
+    email VARCHAR(250) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    last_login VARCHAR(255),
+    status ENUM('active', 'inactive'),
+    PRIMARY KEY(id)
+);
