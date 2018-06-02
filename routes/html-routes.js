@@ -4,6 +4,8 @@
 
 // Dependencies
 // =============================================================
+var db = require("../models");
+var authController = require('../controllers/authcontroller.js');
 
 
 // Routes
@@ -17,5 +19,14 @@ module.exports = function (app) {
         res.render("index");
 
     });
+
+      // GET route for getting all of the todos
+  app.get("/allfunds", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.fund.findAll({}).then(function(allfund) {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(allfund);
+    });
+  });
 
 };

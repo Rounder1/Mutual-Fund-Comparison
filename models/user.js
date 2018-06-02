@@ -2,11 +2,11 @@ module.exports = function(sequelize, Sequelize) {
 
     var User = sequelize.define('user', {
 
-        id: {
-            autoIncrement: true,
-            primaryKey: true,
-            type: Sequelize.INTEGER
-        },
+        // id: {
+        //     autoIncrement: true,
+        //     primaryKey: true,
+        //     type: Sequelize.INTEGER
+        // },
 
         firstname: {
             type: Sequelize.STRING,
@@ -49,6 +49,12 @@ module.exports = function(sequelize, Sequelize) {
 
 
     });
+
+    User.associate = function (models) {
+
+        User.belongsToMany(models.fund, {through: "userfund",});
+
+    }
 
     return User;
 
