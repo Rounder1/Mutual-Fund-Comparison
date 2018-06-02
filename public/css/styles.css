@@ -1,3 +1,29 @@
+#title {
+    color: black;
+    font-weight:  bolder;
+}
+
+#userbuttons {
+    float: right;
+}
+form {
+    font-weight: bolder;
+    padding: 30px;
+}
+
+#header {
+    text-align: center;
+    padding: 20px;
+}
+
+.graph{
+    padding: 30px;
+}
+
+#sample{
+    padding-left: 10% ;
+}
+
 li {
     padding: 5px;
     margin: 5px;

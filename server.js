@@ -9,6 +9,7 @@ var passport   = require('passport');
 var session    = require('express-session');
 var bodyParser = require("body-parser");
 var env = require('dotenv').load();
+var path = require('path');
 // Set Handlebars
 var exphbs = require('express-handlebars');
 
@@ -34,6 +35,7 @@ app.use(passport.session()); // persistent login sessions
 
 // Static directory
 app.use(express.static("public"));
+
 
 // Initialize handlebars
 app.engine("handlebars", exphbs({defaultLayout: "main"}));
