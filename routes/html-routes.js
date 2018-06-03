@@ -20,12 +20,30 @@ module.exports = function (app) {
 
     });
 
-      // GET route for getting all of the todos
-  app.get("/allfunds", function(req, res) {
+  // GET route for all funds
+  app.get("/allfunds/:id", function(req, res) {
     // findAll returns all entries for a table when used with no options
-    db.fund.findAll({}).then(function(allfund) {
+    //db.fund.findAll({}).then(function(allfund) {
       // We have access to the todos as an argument inside of the callback function
-      res.json(allfund);
+      //res.json(allfund);
+    //});
+
+    db.userfund.findAll({
+      where: {
+        userId: req.params.id
+      },
+      include: [db.fund]
+    }).then(function(joinFund) {
+      res.json(joinFund);
+    });
+
+  });
+
+  // POST route to add a fund
+  app.post("/allfunds/add", function(req, res) {
+    db.fund.create(req.body)
+    .then(function(addFund) {
+      res.json(addFund);
     });
   });
 

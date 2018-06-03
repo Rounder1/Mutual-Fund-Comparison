@@ -16,7 +16,7 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.STRING,
         },
 
-        username: {
+        expense_ratio: {
             type: Sequelize.DECIMAL,
         },
     });
