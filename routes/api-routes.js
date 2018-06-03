@@ -10,7 +10,7 @@ module.exports = function (app) {
     var fundSymbol = req.params.symbol;
   
     // Make API call to Alpha Vantage 
-    request("https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=" + fundSymbol + "&apikey=", (error, response, body) => {
+    request("https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=" + fundSymbol + "&apikey=V7X80TI0MSJ0OXK9", (error, response, body) => {
         // Prints an error or returns null if none occur
         console.log('error:', error);
         // Prints the response status code 

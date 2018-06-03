@@ -1,5 +1,44 @@
-<h2>Dashboard</h2>
-<h5>Hurray! you are logged in.</h5>
+<div class="jumbotron jumbotron-fluid" id="jumbotron">
+    <div class="container">
+        <div id="header">
+            <h2 id="header2">Are you saving enough!?</h2>
+            Enter your preferred stock and see how it compares to the S&P 500
+        </div>
+        <form>
+            <div class="form-row">
+                <div class="col-7">
+                    <p>Fund Name:</p>
+                    <input type="text" class="form-control" id="fund_name" placeholder="name">
+                </div>
+                <div class="col">
+                    <p>Fund Symbol:</p>
+                    <input type="text" class="form-control" id="fund_symbol" placeholder="symbol">
+                </div>
+                <div class="col">
+                    <p>Expense Ratio:</p>
+                    <input type="text" class="form-control" id="expense_ratio" placeholder="0.43">
+                </div>
+            </div>
+            </br>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="funddropdown">
+                Action
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success" id="dropdownsubmit">Submit</button>
+    </div>
+</div>
+
 
 <p>Here is a personalize stock value</p>
 <div class="graph">

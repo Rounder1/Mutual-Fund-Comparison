@@ -1,11 +1,23 @@
-<form id="signup" name="signup" method="post" action="/signup">
-    <label for="email">Email Address</label>
-    <input class="text" name="email" type="email" />
-    <label for="firstname">Firstname</label>
-    <input name="firstname" type="text" />
-    <label for="lastname">Lastname</label>
-    <input name="lastname" type="text" />
-    <label for="password">Password</label>
-    <input name="password" type="password" />
-    <input class="btn" type="submit" value="Sign Up" />
+<div class="container" id="signupcontainer">
+<div class="card">
+    <div class="card-body">
+        <form id="signup" name="signup" method="post" action="/signup">
+            <h1 id="register">
+                Register:
+            </h1>
+            <br>
+    <label for="email" id="signupinfo">Email Address</label><br>
+    <input class="text" name="email" type="email" /><br>
+    <label for="firstname" id="signupinfo">First Name</label><br>
+    <input name="firstname" type="text" /><br>
+    <label for="lastname" id="signupinfo">Last Name</label><br>
+    <input name="lastname" type="text" /><br>
+    <label for="password" id="signupinfo">Password</label><br>
+    <input name="password" type="password" /><br>
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+
 </form>
+    </div>
+</div>
+</div>
