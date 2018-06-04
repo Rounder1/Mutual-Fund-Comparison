@@ -1,9 +1,16 @@
+<nav class="navbar navbar-expand-sm bg-light">
+    <span class="glyphicon glyphicon-piggy-bank"></span>
+    <h1 id="title">Mutual Myth</h1>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="/logout"><button type="button" class="btn btn-outline-success">Log Out</button></a>
+        </li>
+    </ul>
+</nav>
+
+
 <div class="jumbotron jumbotron-fluid" id="jumbotron">
     <div class="container">
-        <div id="header">
-            <h2 id="header2">Are you saving enough!?</h2>
-            Enter your preferred stock and see how it compares to the S&P 500
-        </div>
         <form>
             <div class="form-row">
                 <div class="col-7">
@@ -25,7 +32,7 @@
 
         <div class="btn-group">
             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="funddropdown">
-                Action
+                Saved Funds
             </button>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Action</a>
@@ -40,9 +47,12 @@
 </div>
 
 
-<p>Here is a personalize stock value</p>
-<div class="graph">
-    <svg width="600" height="300">
+<div id="sample">
+    <br>
+    <h3 id="sample2">Stock Comparison Value</h3>
+    <div class="graph">
+        <svg width="600" height="300">
 
-    </svg>
+        </svg>
+    </div>
 </div>
