@@ -8,7 +8,9 @@ var env = process.env.NODE_ENV || "development";
 var config = require(path.join(__dirname, '..', 'config', 'config.json'))[env];
 var db = {};
 
-if (config.use_env_variable) {
+if (process.env.JAWSDB_URL) {
+    var sequelize = Sequelize(process.env.JAWSDB_URL);
+} else if (config.use_env_variable) {
     console.log("index.js > RIGHT HERE");
     var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
