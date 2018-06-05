@@ -10,7 +10,7 @@ var db = {};
 
 if (process.env.JAWSDB_URL) {
     var sequelize = Sequelize(process.env.JAWSDB_URL);
-} if else (config.use_env_variable) {
+} else if (config.use_env_variable) {
     console.log("index.js > RIGHT HERE");
     var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else {
