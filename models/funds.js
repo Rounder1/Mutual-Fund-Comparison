@@ -14,7 +14,7 @@ module.exports = function(sequelize, Sequelize) {
             type: Sequelize.DECIMAL,
         },
     });
-        
+
     Fund.associate = function (models) {
 
         Fund.belongsToMany(models.user, {through: "userfund",});
