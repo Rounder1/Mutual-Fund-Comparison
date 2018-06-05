@@ -17,7 +17,7 @@
             <h2 id="header2">Are you saving enough!?</h2>
             Enter your preferred stock and see how it compares to the S&P 500
         </div>
-        <form>
+        <form id="add_fund" name="add_fund" role="form" method="post" action="/allfunds/add">
             <div class="form-row">
                 <div class="col-7">
                     <p>Fund Name:</p>
@@ -33,10 +33,12 @@
                 </div>
             </div>
             </br>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success" id="add_fund_btn">Submit</button>
         </form>
     </div>
 </div>
+
+
 
 <div id="sample">
     <br>

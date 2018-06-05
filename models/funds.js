@@ -2,12 +2,6 @@ module.exports = function(sequelize, Sequelize) {
 
     var Fund = sequelize.define('fund', {
 
-        // fund_id: {
-        //     autoIncrement: true,
-        //     primaryKey: true,
-        //     type: Sequelize.INTEGER
-        // },
-
         fund_name: {
             type: Sequelize.STRING,
         },

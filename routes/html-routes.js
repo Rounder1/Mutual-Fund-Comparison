@@ -21,30 +21,24 @@ module.exports = function (app) {
     });
 
   // GET route for all funds
-  app.get("/allfunds/:id", function(req, res) {
-    // findAll returns all entries for a table when used with no options
-    //db.fund.findAll({}).then(function(allfund) {
-      // We have access to the todos as an argument inside of the callback function
-      //res.json(allfund);
-    //});
+  app.get("/allfunds/all", function(req, res) {
 
-    db.userfund.findAll({
-      where: {
-        userId: req.params.id
-      },
-      include: [db.fund]
-    }).then(function(joinFund) {
-      res.json(joinFund);
+    db.fund.findAll({}).then(function(allFunds) {
+      res.json(allFunds);
     });
-
   });
 
   // POST route to add a fund
   app.post("/allfunds/add", function(req, res) {
-    db.fund.create(req.body)
-    .then(function(addFund) {
-      res.json(addFund);
-    });
+    db.fund.create(
+      {
+        fund_name: req.body.fund_name,
+        symbol: req.body.fund_symbol,
+        expense_ratio: parseFloat(req.body.expense_ratio)
+      }
+    ).then(function(addFund) { // just delete the promise half
+        res.send(addFund); // just delete the promise half
+    }); // just delete the promise half
   });
 
 };
